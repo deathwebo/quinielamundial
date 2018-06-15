@@ -1,7 +1,14 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <el-container>
+      <el-header>
+        <h1>Quiniela Mundial Rusia 2018</h1>
+        <h2>Jornada {{ matchday }}</h2>
+      </el-header>
+      <el-main>
+        <router-view/>
+      </el-main>
+    </el-container>
   </div>
 </template>
 
@@ -23,6 +30,11 @@ export default {
         this.$store.commit('setStandings', standings);
       });
   },
+  computed: {
+    matchday() {
+      return this.$store.state.matchday;
+    },
+  },
 };
 </script>
 
@@ -31,8 +43,10 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.el-header {
+  text-align: center;
 }
 </style>

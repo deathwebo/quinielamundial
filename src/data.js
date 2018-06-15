@@ -11,6 +11,7 @@ export default {
       H: [794, 818],
     },
     score: 0,
+    color: '#e6194b',
   },
   Alan: {
     selections: {
@@ -24,6 +25,7 @@ export default {
       H: [804, 818],
     },
     score: 0,
+    color: '#3cb44b',
   },
   Viper: {
     selections: {
@@ -37,6 +39,7 @@ export default {
       H: [818, 794],
     },
     score: 0,
+    color: '#ffe119',
   },
   Picazo: {
     selections: {
@@ -50,6 +53,7 @@ export default {
       H: [794, 766],
     },
     score: 0,
+    color: '#0082c8',
   },
   Villegas: {
     selections: {
@@ -63,6 +67,7 @@ export default {
       H: [818, 794],
     },
     score: 0,
+    color: '#f58231',
   },
   Chandy: {
     selections: {
@@ -76,6 +81,7 @@ export default {
       H: [766, 804],
     },
     score: 0,
+    color: '#911eb4',
   },
   Villa: {
     selections: {
@@ -89,6 +95,7 @@ export default {
       H: [818, 766],
     },
     score: 0,
+    color: '#46f0f0',
   },
   Erik: {
     selections: {
@@ -102,5 +109,6 @@ export default {
       H: [818, 766],
     },
     score: 0,
+    color: '#fabebe',
   },
 };
