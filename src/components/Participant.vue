@@ -3,16 +3,24 @@
     <div
       class="columns is-mobile">
       <div class="column">
-        <p class="is-size-4-mobile has-text-info">{{ position }}</p>
+        <p
+          class="is-size-4-mobile has-text-info has-text-centered"
+          >{{ position }}</p>
       </div>
       <div class="column">
-        <p class="is-size-4-mobile">{{ participantScore.name }}</p>
+        <p
+          class="is-size-4-mobile has-text-centered"
+          >{{ participantScore.name }}</p>
       </div>
       <div class="column">
-        <p class="is-size-4-mobile has-text-primary">{{ participantScore.score }}</p>
+        <p
+          class="is-size-4-mobile has-text-primary has-text-centered"
+          >{{ participantScore.score }}</p>
       </div>
       <div class="column">
-        <p class="is-size-4-mobile has-text-success">{{ participantScore.goals }}</p>
+        <p
+          class="is-size-4-mobile has-text-success has-text-centered"
+        >{{ participantScore.goals }}</p>
       </div>
     </div>
     <progress

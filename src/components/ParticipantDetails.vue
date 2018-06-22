@@ -21,14 +21,25 @@
         <td>
           <img :src="group.first.crestURI" style="width: 1rem">
           {{ group.first.team }}
+          <span class="icon is-small has-text-success" v-if="group.first.hit">
+            <i class="fas fa-check"></i>
+          </span>
         </td>
         <td>
           <img :src="group.second.crestURI" style="width: 1rem">
           {{ group.second.team }}
+          <span class="icon is-small has-text-success" v-if="group.second.hit">
+            <i class="fas fa-check"></i>
+          </span>
         </td>
       </tr>
     </tbody>
   </table>
+
+  <p>
+    <span class="has-text-success">{{ participant.goals }}</span>
+    goles anotados por los equipos elegidos
+  </p>
 
   <router-link to="/">
     <a class="button">

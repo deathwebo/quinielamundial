@@ -7,19 +7,27 @@ const getters = {
       let goals = 0;
       Object.keys(state.standings).forEach((groupName) => {
         const group = state.standings[groupName];
+        let firstHit = false;
+        let secondHit = false;
         // First place
         if (participant.selections[groupName][0] === group[0].teamId) {
           score += 1;
           goals += group[0].goals;
+          firstHit = true;
         }
 
         // Second place
         if (participant.selections[groupName][1] === group[1].teamId) {
           score += 1;
           goals += group[0].goals;
+          secondHit = true;
         }
         const first = group.find(team => team.teamId === participant.selections[groupName][0]);
         const second = group.find(team => team.teamId === participant.selections[groupName][1]);
+
+        first.hit = firstHit;
+        second.hit = secondHit;
+
         teams.push({
           groupName,
           first,
