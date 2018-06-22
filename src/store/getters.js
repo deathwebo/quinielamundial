@@ -25,12 +25,21 @@ const getters = {
       });
 
       const percentage = ((score / 16) * 100);
+      let colorClass = '';
+
+      if (percentage < 30) {
+        colorClass = 'is-danger';
+      } else if (percentage >= 30 && percentage < 70) {
+        colorClass = 'is-warning';
+      } else {
+        colorClass = 'is-success';
+      }
 
       return {
         name,
         score,
         percentage,
-        color: participant.color,
+        colorClass,
         teams,
       };
     });

@@ -1,14 +1,10 @@
 <template>
-  <div id="app">
-    <el-container>
-      <el-header>
-        <h1>Quiniela Mundial Rusia 2018</h1>
-        <h2>Jornada {{ matchday }}</h2>
-      </el-header>
-      <el-main>
-        <router-view/>
-      </el-main>
-    </el-container>
+  <div class="container">
+    <h1 class="title">Quiniela Mundial Rusia 2018</h1>
+    <h2 class="subtitle">Jornada {{ matchday }}</h2>
+    <div class="container">
+      <router-view/>
+    </div>
   </div>
 </template>
 
