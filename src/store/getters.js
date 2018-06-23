@@ -22,11 +22,18 @@ const getters = {
           goals += group[0].goals;
           secondHit = true;
         }
-        const first = group.find(team => team.teamId === participant.selections[groupName][0]);
-        const second = group.find(team => team.teamId === participant.selections[groupName][1]);
+        const firstRaw = group.find(team => team.teamId === participant.selections[groupName][0]);
+        const secondRaw = group.find(team => team.teamId === participant.selections[groupName][1]);
 
-        first.hit = firstHit;
-        second.hit = secondHit;
+        const first = {
+          ...firstRaw,
+          hit: firstHit,
+        };
+
+        const second = {
+          ...secondRaw,
+          hit: secondHit,
+        };
 
         teams.push({
           groupName,
